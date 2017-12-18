@@ -1,8 +1,16 @@
 .crystal{
 	height: 100px;
 	width: 100px;
+	
 }
 
+p{
+	color: #bfc503;
+}
+
+#words{
+	font-size: 20px
+}
 
 img{
 	height: 100px;
@@ -15,4 +23,27 @@ button{
 	height: 25%;
 	width: 25%;
 	float: left;
+}
+
+.total{
+	text-align: center;
+	font-size: 55px
+}
+
+#score{
+	font-size: 55px
+}
+
+#ranNumber{
+	font-size: 55px;
+}
+
+body{
+	background-image: url("http://cdn.123moviess.net/upload/2016/12/movie_blood-diamond-2006.jpg")
+}
+
+
+.jumbotron{
+	color: #bfc503;
+	padding-top: 10px;
 }

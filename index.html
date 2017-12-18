@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/images">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/reset/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,16 +16,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <title>Crystal game</title>
 </head>
+<style>
+.jumbotron{
+    background-color: transparent;
+</style>
 
 <body>
     <!--onload="function(event)"-->
     <div class="container">
         <div class="col-md-12">
             <div class="jumbotron">
-                <h1> Crystals Collector </h1>
+                <h1> Crystal Collector </h1>
             </div>
         </div>
-        <div class="col-md-12">
+        <div id = "words" class="col-md-12">
             <p> You will be given a random number at the start of the game.</p>
             <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
             <p> You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
@@ -51,33 +55,27 @@
       <!--  <div class="container">-->
         <br>
             <div>
-                <p> Your total score is:
+                <p id="score"> Your total score is:
                 </p>
             </div>
         </div>
         <div class="col-sm-12">
-            <div id="sumtotal">
+            <div id="sumtotal" class= "total">
             </div>
         </div>
     </div>
-<script type="text/javascript">
+<script type="text/javascript" src= "assets/javascript/game.js">
 
 //Initiate game
-    $(document).ready(function() {
+    $(document).ready(function()) 
         
-
-    //create random number to be targeted
+/*
+ //create random number to be targeted
 var target = Math.floor((Math.random() * 50) +60);
     console.log(""+ target);
     document.getElementById("ranNumber").innerHTML = target;
     
-    //$("<span></span").text(""+target);
-
-
-       /*$("#ranNumber").click(function(){*/
-     
-        //create random number for each crystal
-    //var number = Math.floor((Math.random() * 20) + 1)
+    
 var counter = 0;
 var choiceArray = [3, 5, 10, 11];
 
@@ -113,15 +111,6 @@ var crystalChoices = ($(this).attr("data-crystalvalue"));
 //document.getElementById("sumtotal").innerHTML
     console.log("New score" + "" + counter);
     
-/*if(
-        $("#pink").on("click", function(){
-
-// Each time the user clicks the crystal the counter goes up by 1.
-    counter += 1;
-
-//document.getElementById("sumtotal").innerHTML
-    console.log("New score" + counter);*/
- 
 
  //Wins and losses
 
@@ -137,6 +126,7 @@ if (counter === target){
 
  
 });
+*/
  
 </script>
 </body>
